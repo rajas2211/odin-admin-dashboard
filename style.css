@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 :root{
-    --background-color: rgb(61, 136, 221);
-    --profile-background: yellow;
-    
+    --background-color: #3b82f6;
+    --profile-background: yellow;    
 }
 
 body{
     margin: 0;
+    font-family: 'Roboto', 'Helvetica', 'Sans-serif';
 }
 
 .container {
@@ -27,10 +29,7 @@ body{
     padding: 25px 0 0 25px;
     background: var(--background-color);
     color: white;
-}
-
-.sidebar>div, .sidebar>nav {
-    border: 1px dashed green
+    box-sizing: border-box;
 }
 
 nav>ul {
@@ -53,7 +52,8 @@ ul>li {
 /* Header */
 .header {
     display: grid;
-    padding: 20px 60px;
+    padding: 20px 60px 5px;
+    box-sizing: border-box;
 }
 
 .header .top-row {
@@ -66,15 +66,18 @@ ul>li {
     display: grid;
     gap: 20px;
     grid-template-columns: auto 1fr;
+    align-items: center;
+    font-size: 1.5rem;
+
 }
 
 .search input {
     width: 60%;
     border: none;
-    background: lightgrey;
+    background: #eff6ff;
     border-radius: 15px;
     padding: 3px 8px;
-    
+    font-size: 1.5rem;    
 }
 
 .top-row .user-details {
@@ -84,9 +87,6 @@ ul>li {
     align-items: center;
 }
 
-.header > * {
-    border: 1px dashed green;
-}
 
 .header .bottom-row {
     display: grid;
@@ -112,7 +112,7 @@ ul>li {
 .action-buttons button {
     border: 0;
     background-color: var(--background-color);
-    padding: 5px 25px;
+    padding: 15px 25px;
     border-radius: 15px;
     color: white;
 }
@@ -122,8 +122,8 @@ ul>li {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: repeat(2, 1fr);
-    padding: 25px 25px 50px 25px;
-    background: lightgray;
+    padding: 25px 25px 25px 25px;
+    background: #eff6ff;
     gap: 25px;
     box-sizing: border-box;
 }
@@ -150,8 +150,8 @@ ul>li {
 .card {
     border-radius: 15px;
     background-color: white;
-    box-shadow: 5px 5px 15px 1px gray;
-    padding: 15px;
+    box-shadow: 5px 5px 15px 1px #dbeafe;
+    padding: 15px 10px 15px;
     box-sizing: border-box;
 }
 
@@ -159,11 +159,8 @@ ul>li {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 3px;
-}
-
-.card-trending{
-    gap: 10px;
+    /* gap: 1px; */
+    justify-content: space-between;
 }
 
 
@@ -193,10 +190,13 @@ ul>li {
     justify-self: end;
     display: flex;
     gap: 35px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    font-size: 1.6rem;
 }
 
 .announcement {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #dbeafe;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
@@ -218,9 +218,13 @@ ul>li {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 0 25px;
+    /* gap: 0 5px; */
 }
 
 .trending>.profile-photo {
     grid-row: 1 / span 2;
+}
+
+.announcement-description {
+    font-size: 0.8rem;
 }
