@@ -34,6 +34,10 @@ body{
     box-sizing: border-box;
 }
 
+.sidebar h1 {
+    font-size: 2.5rem;
+}
+
 nav>ul {
     list-style-type: none;
     margin: 0;
@@ -64,6 +68,8 @@ ul>li {
     grid-template-columns: 1fr auto;
     align-items: center;
 }
+
+
 
 .top-row .search {
     display: grid;
